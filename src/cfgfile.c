@@ -1233,7 +1233,7 @@ int parse_cmdline_option (struct uae_prefs *p, char c, char *arg)
     case 'r': strncpy (p->romfile, arg, 255); p->romfile[255] = 0; break;
     case 'K': strncpy (p->keyfile, arg, 255); p->keyfile[255] = 0; break;
     case 'p': strncpy (p->prtname, arg, 255); p->prtname[255] = 0; break;
-	/*     case 'I': strncpy (p->sername, arg, 255); p->sername[255] = 0; p->use_serial = 1; break; */
+    case 'I': strncpy (p->sername, arg, 255); p->sername[255] = 0; p->use_serial = 1; break;
     case 'm': case 'M': parse_filesys_spec (p, c == 'M', arg); break;
     case 'W': parse_hardfile_spec (p, arg); break;
     case 'S': parse_sound_spec (p, arg); break;
